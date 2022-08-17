@@ -1,0 +1,49 @@
+    let children = sieveVar.childNodes;
+
+    // let s2 = document.getElementById("sieve");
+
+    for(var i=0;i<children.length;i++){
+        (function(temp){
+            setTimeout(
+                function(){
+                    if(boolArray[parseInt(children[temp].textContent)]===true){
+                        children[temp].style.backgroundColor = "whitesmoke";
+                        children[temp].style.color = "black";
+                        children[temp].style.fontSize = "1.23em";
+                        children[temp].style.fontStyle = "italic";
+
+                    }
+                    else{
+                        children[temp].classList.toggle("blinkdiv");
+                    }
+                }
+                ,500 + (100*temp)
+            )
+        })(i);
+    }
+
+_______________________________________________________
+// paste in sieve generate function at bottom
+
+    // taking care of boolArray too here
+
+    // updation of sieve
+    // loop till size... here 100
+    for(let i=2;i<=Math.sqrt(400);i++){
+        // console.log("now i = "+i);
+        if(boolArray[i]===true){
+            for(let j=i*i;j<boolArray.length;j+=i){
+                // j+=i  because it's factors already considered
+                // multiples of j marked false
+                boolArray[j]= false;
+            }
+        }
+    }
+
+    // console.log("now sieve :");
+    // console.log(boolArray);
+
+    for(let i=0;i<boolArray.length;i++){
+        console.log(i,"->",boolArray[i]);
+    }
+    console.log(" . updated boolArray . .")

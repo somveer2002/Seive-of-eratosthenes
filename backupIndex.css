@@ -1,0 +1,158 @@
+html,body{
+    background-image: linear-gradient(to right, #DECBA4, #d0dada);
+    /* height: 100%; */
+}
+
+
+/* or just use grid template columns and divide in 3 ..... columns */
+/* text sieve and info */
+.container{
+
+    display: grid;
+    font-size: 1.67em;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 22.33%;
+    padding: 10px 10px 10px 10px;
+    /* margin-top: 20px; */
+    /* background-image: linear-gradient(to right, #DECBA4, #3E5151); */
+    
+}
+
+#text{
+
+    font-size: 1.4em;
+
+    color: rgb(14, 9, 9);
+    position: absolute;
+    /* top: 50%; */
+    /* left: -80%; */
+    /* right: -1 ;*/
+    
+    left: 10px;
+    z-index: 1;
+    overflow: visible;
+    transform: rotate(270deg);
+
+    text-shadow: 
+    1px 0px 1px #ccc, 0px 1px 1px #eee, 
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px #ccc, 3px 4px 1px #eee,
+    5px 4px 1px #ccc, 4px 5px 1px #eee,
+    6px 5px 1px #ccc, 5px 6px 1px #eee,
+    7px 6px 1px #ccc;
+
+}
+
+.container {
+    position: relative;
+ }
+ 
+
+
+#sieve{
+    text-shadow: none;
+    border-radius: 2.33%;
+    padding: 15px 15px 15px 15px;
+    display: grid;
+    color: snow;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    grid-column-gap: 1vw;
+    grid-row-gap:2vh;
+    background-color: rgb(68, 68, 63);
+
+       
+}
+
+
+#sieve div{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    min-width: 50px;
+    clip-path: circle(50%);
+    color: rgb(5, 4, 5);
+
+}
+
+
+@-webkit-keyframes blackWhite {  
+    0% { 
+        /* background-color: white;  */
+        /* transform: rotate(360deg); */
+        background-color: rgb(37, 37, 37); 
+        color: sandybrown;
+
+    }
+    25%{
+        /* background-color: rgb(253, 234, 234);  */
+        background-color: rgb(80, 78, 78); 
+        color: aliceblue;
+        color: rgb(1, 4, 7);
+        transform: rotate(90deg);
+    }
+    50% { 
+        /* background-color: antiquewhite; */
+        background-color: rgb(80, 78, 78); 
+        color: aliceblue;
+        transform: rotate(180deg);
+        /* transform: rotate(-120deg); */
+
+    }
+    75% {
+        
+        background-color: rgb(80, 78, 78); 
+        color: aliceblue;
+        transform: rotate(270deg);
+
+        }
+    100% { 
+        background-color: rgb(37, 37, 37); 
+        color: sandybrown;
+        transform: rotate(360deg);
+        /* transform: rotate(-60deg); */
+
+        
+    }
+  }
+  
+.blinkdiv {
+    
+      background-color: black;
+      -webkit-animation-name: blackWhite;  
+      -webkit-animation-iteration-count: infinite;  
+      -webkit-animation-duration: 2.50s; 
+
+  }   
+
+#info{
+
+    color: rgb(14, 9, 9);
+    position: absolute;
+    /* top: 50%; */
+    /* left: -80%; */
+    /* right: -1 ;*/
+    
+    right:-20px;
+    z-index: 1;
+    overflow: visible;
+    transform: rotate(90deg);
+    /* . . . . . default below . . . . .  */
+
+    font-size: 1.4em;
+    visibility: hidden;
+    text-shadow: 
+    1px 0px 1px #ccc, 0px 1px 1px #eee, 
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px #ccc, 3px 4px 1px #eee,
+    5px 4px 1px #ccc, 4px 5px 1px #eee,
+    6px 5px 1px #ccc, 5px 6px 1px #eee,
+    7px 6px 1px #ccc;
+}
+
